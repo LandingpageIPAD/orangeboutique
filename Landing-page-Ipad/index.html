@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page iPad</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 60px;
+      margin-bottom: 50px;
+      text-align: left;
+      max-width: 800px;
+      line-height: 1.3;
+    }
+
+    table.nav-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.nav-table tr {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    table.nav-table td.icon-cell {
+      flex: 0 0 80px;
+      padding-right: 15px;
+      text-align: center;
+    }
+
+    table.nav-table td.icon-cell img {
+      height: 90px;
+      width: auto;
+      margin-bottom: 8px;
+      margin-top: 0;
+    }
+
+    table.nav-table td.text-cell {
+      flex: 1;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: left;
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+   h2 {
+  font-size: 50px;
+  margin-top: 50px;   /* pour descendre un peu */
+  margin-bottom: 40px;
+  line-height: 1.5;
+  max-width: 880px;   /* largeur table environ */
+  margin-left: 0;     /* aligner à gauche (PAS auto) */
+  text-align: left;   /* texte aligné à gauche */
+}
+
+    /* iPad Mini Portrait */
+    @media (max-width: 768px) and (orientation: portrait) {
+      body {
+        padding-top: 50px;
+        padding-bottom: 60px;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 42px !important;
+        margin-top: 40px !important;
+        margin-bottom: 20px !important;
+        line-height: 1.4 !important;
+        max-width: 80% !important;
+      }
+
+      table.nav-table td.text-cell {
+        font-size: 30px !important;
+        line-height: 1.5 !important;
+      }
+
+      table.nav-table td.icon-cell img {
+        height: 130px !important;
+      }
+
+      h2 {
+        max-width: 100%;
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+    }
+
+    /* iPad Mini Paysage */
+    @media (max-width: 1024px) and (orientation: landscape) {
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        justify-content: flex-start;
+      }
+
+      h1 {
+        font-size: 38px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        max-width: 100%;
+        line-height: 1.3;
+      }
+
+      table.nav-table td.text-cell {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      table.nav-table td.icon-cell img {
+        height: 100px;
+      }
+
+      h2 {
+        max-width: 100%;
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+    }
+
+    /* iPad Pro Portrait */
+    @media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+      body {
+        padding: 60px 20px;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 55px !important;
+        margin-top: 80px !important;
+        margin-bottom: 80px !important;
+        max-width: 100% !important;
+        line-height: 1.4 !important;
+      }
+
+      table.nav-table td.text-cell {
+        font-size: 45px !important;
+        line-height: 1.5 !important;
+      }
+
+      table.nav-table td.icon-cell img {
+        height: 130px !important;
+      }
+
+      h2 {
+        max-width: 100%;
+        font-size: 48px !important;
+        margin-top: 40px !important;
+        margin-bottom: 50px !important;
+        text-align: left !important;
+      }
+    }
+
+    /* iPad Pro Paysage */
+    @media (min-width: 1025px) and (orientation: landscape) {
+      h1 {
+        font-size: 55px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        max-width: 1000px;
+        line-height: 1.3;
+      }
+
+      table.nav-table td.text-cell {
+        font-size: 40px;
+        line-height: 1.5;
+      }
+
+      table.nav-table td.icon-cell img {
+        height: 100px;
+      }
+
+      h2 {
+        max-width: 880px;
+        font-size: 50px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+    }
+
+    /* iPad Air 13 pouces Portrait */
+    @media (min-width: 1024px) and (max-width: 1080px) and (orientation: portrait) {
+      h1 {
+        font-size: 50px;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        line-height: 1.5;
+      }
+
+      table.nav-table td.text-cell {
+        font-size: 38px;
+        line-height: 1.6;
+      }
+
+      table.nav-table td.icon-cell img {
+        height: 120px;
+      }
+
+      h2 {
+        max-width: 880px;
+        font-size: 52px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Depuis cette tablette, vous pouvez :</h1>
+
+    <table class="nav-table">
+      <tr>
+        <td class="icon-cell">
+          <img src="images/number1-wired.svg" alt="1" />
+        </td>
+        <td class="text-cell">
+          <a href="https://quefairedemesdechets.ademe.fr/" target="_blank">Trouvez des acteurs responsables près de chez vous (recycleurs, réparateurs).</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="icon-cell">
+          <img src="images/number2-wired.svg" alt="2" />
+        </td>
+        <td class="text-cell">
+          <a href="https://nosgestesclimat.fr/" target="_blank">Calculer votre empreinte carbone.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="icon-cell">
+          <img src="images/number3-wired.svg" alt="3" />
+        </td>
+        <td class="text-cell">
+          <a href="https://altimpact.fr/bonnes-pratiques/?f-domain%5B%5D=55&f-domain%5B%5D=75" target="_blank">Découvrir les gestes pour être connecté et responsables.</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="icon-cell">
+          <img src="images/number4-wired.svg" alt="4" />
+        </td>
+        <td class="text-cell">
+          <a href="https://boutique.orange.fr/informations/le-store" target="_blank">Consulter l'agenda des ateliers de la boutique.</a>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Touchez l'écran pour commencer !</h2>
+  </div>
+</body>
+</html>
